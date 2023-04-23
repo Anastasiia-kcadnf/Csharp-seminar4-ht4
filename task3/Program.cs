@@ -10,8 +10,8 @@ int ReadInt(string message)
 
 int[] CreateArray(int size)
 {
-    int[] array = new int[8];
-    for(int i = 0; i < 8; i++)
+    int[] array = new int[size];
+    for(int i = 0; i < size; i++)
     {
         Console.Write($"Enter array[{i}]: ");
         array[i] = Convert.ToInt32(Console.ReadLine());
@@ -26,6 +26,6 @@ void PrintArray(int[] array)
     Console.Write("\n");
 }
 
-int number = ReadInt("Input a number");
-int[] CreateArray;
+int arraySize = ReadInt("Enter array size");
+int[] array = CreateArray(arraySize);
 PrintArray(array);
